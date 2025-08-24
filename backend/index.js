@@ -116,6 +116,19 @@ app.post('/api/board/:id/join', (req, res) => {
   res.json({ success: true });
 });
 
+app.get('/api/board', (req, res) => {
+  res.json({ message: 'Board API working', status: 'ok' });
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'Backend is running', timestamp: new Date().toISOString() });
+});
+
+// Basic route for testing
+app.get('/', (req, res) => {
+  res.json({ message: 'InstantBoard Backend API', version: '1.0.0' });
+});
+
 // Socket.IO Connection Handling
 io.on('connection', (socket) => {
   console.log(`User connected: ${socket.id}`);
