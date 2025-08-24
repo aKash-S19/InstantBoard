@@ -11,16 +11,19 @@ app.use(cors({
     'https://instant-board-l5vcwff60-akashs-projects-1c5979ab.vercel.app'  // Replace with your actual Vercel frontend URL
   ],
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST'],
 }));
 app.use(express.json());
 
 const server = http.createServer(app);
 const io = new Server(server, { 
   cors: { 
-    origin: ['http://localhost:3000', 'http://localhost:3001'],
-    methods: ['GET', 'POST']
+    origin: [
+      'http://localhost:3000',
+      'https://instant-board-l5vcwff60-akashs-projects-1c5979ab.vercel.app'
+    ],
+    methods: ['GET', 'POST'],
+    credentials: true
   } 
 });
 
