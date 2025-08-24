@@ -8,8 +8,9 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://instant-board.vercel.app',  // Your current frontend URL
-    'https://instantboard.vercel.app'    // Add without dash as backup
+    'https://instant-board-frj2h2otn-akashs-projects-1c5979ab.vercel.app',  // New Vercel URL
+    'https://instant-board.vercel.app',  // Old URL (keep as backup)
+    'https://instantboard.vercel.app'    // Alternative URL
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -22,8 +23,9 @@ const io = new Server(server, {
   cors: { 
     origin: [
       'http://localhost:3000',
-      'https://instant-board.vercel.app',  // Your current frontend URL
-      'https://instantboard.vercel.app'    // Add without dash as backup
+      'https://instant-board-frj2h2otn-akashs-projects-1c5979ab.vercel.app',  // New Vercel URL
+      'https://instant-board.vercel.app',  // Old URL (keep as backup)
+      'https://instantboard.vercel.app'    // Alternative URL
     ],
     methods: ['GET', 'POST'],
     credentials: true
