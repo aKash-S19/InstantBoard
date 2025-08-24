@@ -5,7 +5,13 @@ const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://instant-board-l5vcwff60-akashs-projects-1c5979ab.vercel.app/'  // Replace with your actual Vercel frontend URL
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 const server = http.createServer(app);
