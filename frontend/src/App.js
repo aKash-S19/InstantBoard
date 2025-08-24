@@ -1140,7 +1140,7 @@ function App() {
       <header className="header">
         <div className="header-left">
           <div className="logo">
-            <div className="logo-icon">✏️</div>
+            <img src="/logoh.png" alt="Logo" className="logo-image" style={{width: '24px', height: '24px'}} />
             InstantBoard
           </div>
           <div className="board-title">{boardTitle}</div>
