@@ -1,6 +1,9 @@
 # 🎨 InstantBoard
 
 **InstantBoard** is your go-to online whiteboard for instant, real-time collaboration. No signups, no downloads—just open the link and start creating together!
+<p align="center">
+  <img src="frontend/public/preview.png" alt="InstantBoard Preview" width="700"/>
+</p>
 
 ---
 
