@@ -4,7 +4,7 @@ import { QRCodeSVG } from 'qrcode.react';
 import './App.css';
 
 // Make sure you don't have trailing slashes
-const API_URL = process.env.REACT_APP_API_URL || 'https://instantboard-production.up.railway.app';
+const API_URL = process.env.REACT_APP_API_URL || 'https://instantboard.onrender.com';
 
 // Utility functions
 const generateRandomName = () => {
